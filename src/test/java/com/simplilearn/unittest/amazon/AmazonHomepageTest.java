@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -35,6 +36,7 @@ class AmazonHomepageTest {
 	}
 
 	@Test
+	@RepeatedTest(value = 3 , name = RepeatedTest.LONG_DISPLAY_NAME)
 	@DisplayName("Should validate Amazon Homepage title")
 	void testAmazonHomePageTitle() {
 		String expectedTitle = "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
